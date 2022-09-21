@@ -12,13 +12,15 @@
     }
 </style>
 <body>
-    <div></div>
-    <input type="button" id ="x" value="klikk" onclick="nem()">
+    <div class="container">
+        <button onclick="nem()">Are you happy? <span>:)</span></button>
+    </div>
 
 
     <script>
         function nem(){
-            let emoji = document.getElementById("x").innerHTML
+            let emoji = document.getElementById("span").innerHTML
+            document.querySelector("#span").innerHTML = emoji == ':)' ? ':(' 
             
         }
     </script>
