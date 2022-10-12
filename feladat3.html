@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>szamologep</title>
+    <style>
+        .container{
+            max-width: 600px;
+            border: solid 2px blue;
+            text-align: center;
+        }
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2px;
+            border-radius: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Egyszerű számológép</h2>
+        <div class="inputs">
+            <input id="szam1" type="textarea" placeholder="add meg az egyik számot" style="width: 80%; height: 20px;">
+            <input id="szam2" type="textarea" placeholder="add meg a másik számot" style="width: 80%; height: 20px">
+            <input id="eredmeny" type="textarea" style="width: 80%; height: 20px">
+        </div>
+        <div class="row">
+            <input type="button" value="+" onclick="plusz()">
+            <input type="button" value="-" onclick="minusz()">
+            <input type="button" value="/" onclick="osztas()">
+            <input type="button" value="*" onclick="szorzas()">
+        </div>
+    </div>
+
+    <script>
+        function plusz(){
+            let szam1 = +document.querySelector("#szam1").value
+            let szam2 = +document.querySelector("#szam2").value
+            let eredmeny = szam1 + szam2
+            document.querySelector("#eredmeny").value = eredmeny
+        }
+        function minusz(){
+            let szam1 = +document.querySelector("#szam1").value
+            let szam2 = +document.querySelector("#szam2").value
+            let eredmeny = szam1 - szam2
+            document.querySelector("#eredmeny").value = eredmeny
+        }
+        function osztas(){
+            let szam1 = +document.querySelector("#szam1").value
+            let szam2 = +document.querySelector("#szam2").value
+            let eredmeny = szam1 / szam2
+            document.querySelector("#eredmeny").value = eredmeny
+        }
+        function szorzas(){
+            let szam1 = +document.querySelector("#szam1").value
+            let szam2 = +document.querySelector("#szam2").value
+            let eredmeny = szam1 * szam2
+            document.querySelector("#eredmeny").value = eredmeny
+        }
+    </script>
+</body>
+</html>

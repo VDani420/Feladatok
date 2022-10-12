@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teglalap</title>
+</head>
+<body>
+    <div class="container">
+        <input id="szam1" type="number">
+        <input id="szam2" type="number">
+        <input type="button" value="szamol" onclick="szamol()">
+        <div id="kerulet"></div>
+        <div id="terulet"></div>
+    </div>
+
+    <script>
+        function szamol(){
+            let a = +document.querySelector("#szam1").value 
+            let b = +document.querySelector("#szam2").value
+            let kerulet = 2*(a+b)
+            let terulet = a*b
+            console.log(kerulet)
+            document.querySelector("#kerulet").innerHTML = kerulet
+            document.querySelector("#terulet").innerHTML = terulet 
+        }
+    </script>
+</body>
+</html>
